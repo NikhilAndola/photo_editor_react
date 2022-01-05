@@ -1,10 +1,14 @@
-import React from 'react'
-import "./App.css"
+import React from "react";
+import "./App.css";
 
-const SidebarItem = () => {
-    return (
-            <button className="sidebar-item">Sidebar Item</button>
-    )
-}
+const SidebarItem = ({ name, active, handleClick }) => {
+  return (
+    <button className={`sidebar-item ${active ? "active" : ""}`}
+    onClick={handleClick}
+    >
+    {name}
+    </button>
+  );
+};
 
-export default SidebarItem
+export default SidebarItem;
